@@ -1,6 +1,22 @@
-module Main where
+{-# LANGUAGE OverloadedStrings     #-}
+{-# LANGUAGE QuasiQuotes           #-}
+{-# LANGUAGE TemplateHaskell       #-}
+{-# LANGUAGE TypeFamilies          #-}
+import           Yesod
+import           System.Environment     (getEnv)
 
-import Lib
+data HelloWorld = HelloWorld
+
+mkYesod "HelloWorld" [parseRoutes|
+/ HomeR GET
+|]
+
+instance Yesod HelloWorld
+
+getHomeR :: Handler Html
+getHomeR = defaultLayout [whamlet|Hello World!|]
 
 main :: IO ()
-main = someFunc
+main = do
+    port <- read <$> getEnv "PORT"
+    warp port HelloWorld
