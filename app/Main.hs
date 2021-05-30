@@ -26,8 +26,8 @@ getHomeR = do
         addStylesheet $ StaticR css_main_css
         [whamlet|
             <body onload=initDisplay('-17.2')>
-                <h1>Hello World!
-                <p>Example page by ToF
+                <h1>Room
+                <p>
                 <div style="padding: 50px 100px">
                       <div style="width: 216px; height: 126px; position: relative; background: transparent url(static/images/plexiglas.png) no-repeat top left">
                             <div style="position: absolute; left: 38px; top: 33px; width: 120px; height: 34px">

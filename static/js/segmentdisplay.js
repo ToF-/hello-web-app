@@ -35,7 +35,7 @@ function SegmentDisplay(displayId) {
   this.segmentDistance = 0.9;
   this.segmentCount    = SegmentDisplay.SevenSegment;
   this.cornerType      = SegmentDisplay.RoundedCorner;
-  this.colorOn         = "#ff0000";
+  this.colorOn         = "#00ff00";
   this.colorOff        = "#a0a0a0";
 };
 

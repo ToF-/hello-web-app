@@ -1,7 +1,8 @@
 body {
-    background-color: darkblue;
     font-family: 'Courier New', monospace;
     color: lightblue;
+    background-color: #c5e0df;
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
 }
 h1 {
     text-align: center;
@@ -9,3 +10,4 @@ h1 {
 p {
   text-align: center;
 }
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
