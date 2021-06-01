@@ -25,7 +25,7 @@ SegmentDisplay.RoundedCorner   = 2;
 
 function SegmentDisplay(displayId) {
   this.displayId       = displayId;
-  this.pattern         = '###.#';
+  this.pattern         = '####';
   this.value           = '12:34:56';
   this.digitHeight     = 28.5;
   this.digitWidth      = 16.5;
@@ -40,7 +40,8 @@ function SegmentDisplay(displayId) {
 };
 
 SegmentDisplay.prototype.setValue = function(value) {
-  this.value = value;
+  this.pattern = value;
+  this.value= ('0000'+pattern).subString(pattern.length);
   this.draw();
 };
 
